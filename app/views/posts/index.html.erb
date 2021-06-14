@@ -1,0 +1,22 @@
+<body>
+<div class="background">
+  <div class="main">
+
+    <div class="input_area">
+      <form class="form" action="/posts" method="post">
+        <input type="text" name="text">
+        <input type="submit" value="POST">
+      </form>
+    </div>
+
+
+
+    <div class="list_area">
+        <% @posts.each do |post| %>
+      <div class="post_list">
+        <%= post.text %>
+      </div>
+        <% end %>
+    </div>
+</div>
+</body>
